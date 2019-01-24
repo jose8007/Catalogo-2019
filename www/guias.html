@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+<title>APP LIBRESA &ndash; </title>
+
+<link rel="stylesheet" href="css/pure.css">
+<link rel="stylesheet" href="css/side-menu.css">
+
+    
+    <script language="JavaScript" type="text/javascript" src="js/SpryData.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/xpath.js">   </script>
+    <script language="JavaScript" type="text/javascript" src="js/SpryDataExtensions.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/SpryURLUtils.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/SpryPagedView.js"></script>
+
+    <script language="JavaScript" type="text/javascript">
+
+        var params = Spry.Utils.getLocationParamsAsObject();
+        var xpath = "biblio/Guias";
+
+        if ((params.Cole))
+        xpath = "biblio/Guias[Cole = '"+params.Cole+"']";
+        
+var  dsProducts1 = new Spry.Data.XMLDataSet("GuiList.xml", xpath);
+    
+function Alu(ds, row, index){ var c = row.Alumno.length; return c == '0' ? null : row; };
+    
+function Tea(ds, row, index){ var c = row.Profe.length; return c == '0' ? null : row; };
+    
+function Dos(ds, row, index){ var c = row.Profe.length && row.Alumno.length; return c == '0' ? null : row; };      
+    
+function ToggleFilter(enable, f)
+{
+	if (enable)
+		dsProducts1.addFilter(f, true);
+	else
+		dsProducts1.removeFilter(f, true);
+    
+}
+
+
+ var pvCities = new Spry.Data.PagedView(dsProducts1);   
+      
+</script>
+
+</head>
+    
+    
+<body>
+
+
+
+<div id="layout">
+
+    <div id="main">
+        <div class="header3">
+            <img src="imag/imagcolec.jpg" width="100%">
+
+
+        </div>
+        <div id="men1">
+        <a href="index.html" style="margin-left:50px;">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="60" height="60" viewBox="0 0 37.95 41.25" enable-background="new 0 0 37.95 41.25" xml:space="preserve">
+<ellipse fill="#fff" cx="18.918" cy="19.588" rx="18.975" ry="21.662"/>
+<polygon fill="#c1c1c1" points="5.318,17.782 18.509,4.592 23.521,9.604 23.521,6.062 28.688,6.062 28.688,14.124 32.179,17.612 30.11,17.612 
+	30.11,30.652 22.525,30.652 22.525,20.221 15.751,20.221 15.751,30.652 7.215,30.652 7.215,17.814 "/>
+<rect fill="#c1c1c1" x="16.384" y="20.854" width="5.563" height="9.797"/>
+</svg></a>
+             
+            </div>
+        <div class="content">
+            
+                <div id="butcole">  <h3>Colecciones</h3>
+                    <p><a href="guias.html?Cole=Garabato" class="button2">Garabato</a></p>
+                    <p><a href="guias.html?Cole=Mitad del mundo" class="button2">Mitad del mundo</a></p>
+                    <p><a href="guias.html?Cole=País del sol" class="button2">País del sol</a></p>
+                    <p><a href="guias.html" class="button2">Todas las guías</a></p>      
+            
+                    </div>
+            
+ <div>
+
+     
+            <div class="squaredTwo">
+        <form>
+	        &nbsp;&nbsp;<label>Guías del Alumno</label>
+            <input type="checkbox" value="" onClick="ToggleFilter(this.checked, Alu); pa()" />
+                    
+	      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<label>Guías del Profesor</label>
+            <input type="checkbox" value="" onClick="ToggleFilter(this.checked, Tea); pa()" />
+            
+                             
+                </form>  </div>
+     <div spry:region="pvCities">
+	<p>Guías encontrados: {ds_UnfilteredRowCount}</p>
+	
+</div>
+     
+            <div>
+            
+                    
+            <div spry:region="dsProducts1">
+                                
+               <ol id="probq"> <div spry:repeat="dsProducts1">
+                   
+                        <div id="caja">
+                        <li style="display:none;"></li>
+                        <div id="boximg"><img src="webimagfin/{Imag}.webp"></div>
+                        <div id="text">
+                        <p style="text-transform: uppercase;">{Libro}</p>
+                            <p><strong>Colección:</strong><br/>{Cole}</p>
+                         </div>
+                            
+                            <div id="textGui">   
+                            
+                            <div class="icon1"  spry:choose="choose">
+                            <div spry:when="'{Profe}'.match(/^[a-z]/i);" style="color: red;">
+                            <input class="imagpdf" type="image" src="imag/IconTeach.png">      </div>
+                         
+                                <div spry:when="'{Profe}'.match([]);" style="color: blue; display:none;">
+                             <img src="imag/IconMal.png" width="50"></div>
+			             </div>
+                            
+                            <div class="icon1" spry:choose="choose">
+			             <div spry:when="'{Alumno}'.match(/^[a-z]/i);" style="color: red;">
+                             <input class="imagpdf" type="image" src="imag/girl.png">
+                                </div>
+                         <div spry:when="'{Alumno}'.match([]);" style="color: blue; display:none;">
+                             <img src="imag/IconMal.png" width="50"></div>
+			             </div> 
+                        </div>
+                            </div>     
+            
+                   </div>
+                   </ol>
+            </div>
+        
+            </div>
+    </div>
+    
+        
+      </div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

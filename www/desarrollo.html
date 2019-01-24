@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+<title>APP LIBRESA &ndash; </title>
+
+<link rel="stylesheet" href="css/pure.css">
+<link rel="stylesheet" href="css/side-menu.css">
+<link rel="stylesheet" type="text/css" href="css/customNew.css" />
+    
+<script language="JavaScript" type="text/javascript" src="js/xpath.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/SpryData.js"></script>
+	<script language="JavaScript" type="text/javascript">
+
+        
+        var  dsProducts1 = new Spry.Data.XMLDataSet("recipeproblem.xml", "Catalogos/Catalogo[coleccion = 'Desarrollo del pensamiento']");
+        
+</script>
+
+</head>
+    
+    
+<body>
+
+<div id="layout">
+
+    <div id="main">
+        <div class="header3">
+            <img src="imag/desaimag.jpg" width="100%">
+
+
+        </div>
+        <div id="men1">
+ <a href="index.html" style="margin-left:50px; float:left;">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="60" height="60" viewBox="0 0 37.95 41.25" enable-background="new 0 0 37.95 41.25" xml:space="preserve">
+<ellipse fill="#FFFFFF" cx="18.918" cy="19.588" rx="18.975" ry="21.662"/>
+<polygon fill="#c1c1c1" points="5.318,17.782 18.509,4.592 23.521,9.604 23.521,6.062 28.688,6.062 28.688,14.124 32.179,17.612 30.11,17.612 
+	30.11,30.652 22.525,30.652 22.525,20.221 15.751,20.221 15.751,30.652 7.215,30.652 7.215,17.814 "/>
+<rect fill="#c1c1c1" x="16.384" y="20.854" width="5.563" height="9.797"/>
+</svg></a>            
+            </div>
+        
+        <div class="content">
+            <div id="desa1">
+            <img src="imag/desatitul.png" class="pure-img">
+           
+                <p class="parra">El propósito fundamental de la serie DESARROLLO DEL PENSAMIENTO- P.A.I, del primero al séptimo año de Educación Básica, es ofrecer a los maestros, estudiantes y padres de familia una herramienta práctica y efectiva para la enseñanza- aprendizaje de un conjunto de destrezas cognitivas
+esenciales para el razonamiento, la comprensión, la creatividad y el desarrollo de valores y actitudes.</p><p class="parra">Esta colecciòn cuenta con guía del maestro que ofrece una orientación respecto a la metodología para trabajar las destrezas y también respecto a la solución de cada ejercicio.</p></div>
+            
+                    <div spry:region="dsProducts1">
+           
+               <div class="imgbook" spry:repeat="dsProducts1">
+                   
+                            <div class="icon1"  spry:choose="choose">
+                            <div spry:when="'{img}'.match(/^[a-z]/i);">
+                            <input class="inmag" type="image" src="webimagfin/{img}.webp"  onclick="location='datlibros.html?isbn={isbn}'">
+                                <span value="fel">{titulo}</span>
+                            </div>
+                         
+                            <div spry:when="'{img}'.match([]);">
+                                <input class="inmag" type="image" src="webimagfin/sinportada.webp"  onclick="location='datlibros.html?isbn={isbn}'">
+                                <span value="fel">{titulo}</span>
+                            </div>
+			             </div>
+                 </div>
+    <div class="button2A"><a href="BookDesarro.html"><img src="demos/desarrollopensa.jpg" width="120" height="180" alt="Demo"/></a></div>                          
+                        
+            <div class="clean"></div>
+
+        </div>
+                              
+        </div>        
+    </div>
+ 
+</div>
+
+</body>
+</html>

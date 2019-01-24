@@ -1,0 +1,470 @@
+/*
+ * Please see the included README.md file for license terms and conditions.
+ */
+
+/* Disable certain interactions on touch devices */
+/* SOURCE: https://github.com/ftlabs/fastclick/blob/master/examples/input.html */
+/* LICENSE: https://github.com/ftlabs/fastclick/blob/master/LICENSE */
+body {
+    -webkit-touch-callout: none ;
+    -webkit-text-size-adjust: none ; -ms-text-size-adjust: none ;
+    -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ; user-select: none ;
+    -webkit-highlight: none ;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) ;
+    -webkit-tap-highlight-color: transparent ;      /* For some Androids */
+}
+
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+html {
+    -ms-touch-action: pan-x ;
+}
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+body {
+    -ms-touch-action: pan-y ;
+    -ms-content-zooming: none ;
+}
+
+/* allow copy-paste */
+input, textarea  {
+    -webkit-user-select: text ; -moz-user-select: text ; -ms-user-select: text ; user-select: text ;
+}
+
+body {
+    /* margin: 0.5rem ; */
+    background: white ;
+    color: black ;
+}
+
+.align-center {
+    text-align: center ;
+}
+
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+Add transition to containers so they can push in and out.
+*/
+#layout,
+#menu,
+.menu-link {
+    -webkit-transition: all 0.0s ease-out;
+    -moz-transition: all 0.0s ease-out;
+    -ms-transition: all 0.0s ease-out;
+    -o-transition: all 0.0s ease-out;
+    transition: all 0.0s ease-out;
+}
+
+/*
+This is the parent `<div>` that contains the menu and the content area.
+*/
+#layout {
+    position: relative;
+    padding-left: 0;
+}
+    #layout.active {
+        position: relative;
+       
+    }
+        #layout.active #menu {
+            left: 150px;
+            width: 150px;
+        }
+
+        #layout.active .menu-link {
+            left: 150px;
+        }
+/*
+The content `<div>` is where all your content goes.
+*/
+.content {
+    margin: 0 auto;
+    padding: 5%;
+    max-width: 800px;
+    line-height: 5%;
+    
+    }
+
+
+    .header h1 {
+        margin: 0.2em 0;
+        font-size: 3em;
+        font-weight: 300;
+    }
+
+
+.content-subhead {
+    margin: 50px 0 20px 0;
+    font-weight: 300;
+    color: #888;
+}
+
+.clean {
+    clear: both;
+
+}
+
+/*
+The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
+appears on the left side of the page.
+*/
+
+#menu {
+    margin-left: -150px; /* "#menu" width */
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    background: #468ea3;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+    /*
+    All anchors inside the menu should be styled like this.
+    */
+    #menu a {
+        color: #fff;
+        border: none;
+        padding: 0.6em 0 0.6em 0.6em;
+    }
+
+    /*
+    Remove all background/borders, since we are applying them to #menu.
+    */
+     #menu .pure-menu,
+     #menu .pure-menu ul {
+        border: none;
+        background: transparent;
+    }
+
+    /*
+    Add that light border to separate items into groups.
+    */
+    #menu .pure-menu ul,
+    #menu .pure-menu .menu-item-divided {
+        border-top: 1px solid #468ea3;
+    }
+        /*
+        Change color of the anchor links on hover/focus.
+        */
+        #menu .pure-menu li a:hover,
+        #menu .pure-menu li a:focus {
+            background: #3b729a;
+        }
+
+    /*
+    This styles the selected menu item `<li>`.
+    */
+    #menu .pure-menu-selected,
+    #menu .pure-menu-heading {
+        background: #3b729a;
+    }
+        /*
+        This styles a link within a selected menu item `<li>`.
+        */
+        #menu .pure-menu-selected a {
+            color: #fff;
+        }
+
+    /*
+    This styles the menu heading.
+    */
+    #menu .pure-menu-heading {
+        font-size: 110%;
+        color: #fff;
+        margin: 0;
+    }
+
+/* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+/*
+The button to open/close the Menu is custom-made and not part of Pure. Here's
+how it works:
+*/
+
+/*
+`.menu-link` represents the responsive menu toggle that shows/hides on
+small screens.
+*/
+.menu-link {
+    position: fixed;
+    display: block; /* show this only on small screens */
+    top: 0;
+    left: 0; /* "#menu width" */
+    background: #3b729a;
+    background: rgba(0,0,0,0.7);
+    font-size: 12px; /* change this value to increase/decrease button size */
+    z-index: 10;
+    width: 2em;
+    height: auto;
+    padding: 2.1em 1.6em;
+}
+
+    .menu-link:hover,
+    .menu-link:focus {
+        background: #3b729a;
+    }
+
+    .menu-link span {
+        position: relative;
+        display: block;
+    }
+
+    .menu-link span,
+    .menu-link span:before,
+    .menu-link span:after {
+        background-color: #fff;
+        width: 100%;
+        height: 0.2em;
+    }
+
+        .menu-link span:before,
+        .menu-link span:after {
+            position: absolute;
+            margin-top: -0.6em;
+            content: " ";
+        }
+
+        .menu-link span:after {
+            margin-top: 0.6em;
+        }
+
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `48em`, but modify this based on your app's needs.
+*/
+@media (min-width: 48em) {
+
+    
+
+    #layout {
+    }
+    #menu {
+        left: 150px;
+    }
+
+    .menu-link {
+        position: fixed;
+        left: 150px;
+        display: none;
+    }
+
+    #layout.active .menu-link {
+        left: 150px;
+    }
+}
+
+/* new coder app*/
+
+
+
+
+
+.pl1 {
+    width: 100%;
+    height: 150px;
+    /*background-color: #247689;*/
+    margin-top: 20px;
+}
+
+
+
+#datos {
+    width: 60%;
+    height: 160px;
+    float: left;
+    margin-left: 30px;
+}
+#datos li{ list-style: none;
+    line-height: 1.4em;
+    font-family:sans-serif;
+    font-size: 0.7em:
+
+}
+
+#imagLib {
+    float: left;
+
+}
+
+
+
+
+
+#men1 span{
+    margin-left: 25px;
+    font-size: 24px;
+    color: white;
+    float: left;
+    margin-top: 13px;   
+}
+
+#btn1{
+    float: right;
+    margin-right: 50px;
+  
+}
+
+#clave1{
+    height: 40px;
+    background-color: #ffffff;
+
+}
+
+
+
+
+
+
+.imgbook span{
+    display: block;
+    padding-top:10px;
+    line-height: normal;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+#primero{ background-image: url('/imag/backprimeroBSa.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+#segundo{ background-image: url('/imag/backsegundoBSa.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.pl1 #num{
+    font-size: 6em;
+    margin-top: 70px;
+    position: absolute;
+    margin-left: 5px;
+    color: white;
+}
+
+.pl1 #sun{
+    font-size: 2em;
+    margin-top: 50px;
+    position: absolute;
+    margin-left: 60px;
+    color: white;
+}
+.pl1 #cate{
+    font-size: 1.5em;
+    margin-top: 80px;
+    position: absolute;
+    margin-left: 60px;
+    color: white;
+}
+
+.pl1 #texto{
+    font-size: 0.8;
+    margin-top: 20px;
+    position: absolute;
+    margin-left: 140px;
+    color: black;
+    line-height: normal;
+}
+
+a { text-decoration: none;}
+
+
+
+/*#textcole{
+    font-size: 0.8em;
+    margin-top: 10px;
+    position: absolute;
+    margin-left:170px;
+    color: black;
+    line-height: normal;
+    width: 210px;
+    
+}*/
+
+#coleLeo{
+	background-image: url('/imag/imagplan.jpg');
+	background-size: cover;
+	position: relative;
+    
+}
+
+#coleGara{ background-image: url('/imag/backgara1.png');
+    background-size: cover;
+    position: relative;}
+
+#coleMitad{ background-image: url('/imag/backmitad1.png');
+    background-size: cover;
+    position: relative;
+    background-color:#c3ccce;
+    }
+
+#coleClasico{ background-image: url('/imag/backclasico1.png');
+    background-size: cover;
+    position: relative;}
+
+#coleAntar{
+	background-image: url('/imag/backAntare.png');
+	background-size: cover;
+	position: relative;
+}
+
+#colePais{ background-image: url('/imag/backPais.png');
+    background-size: cover;
+    position: relative;}
+
+#coleCronica{
+	background-image: url('/imag/backCroni.png');
+	background-size: cover;
+	position: relative;
+}
+
+#palclave1{
+    width: 140px;
+    height: 40px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 60px;
+    background-color:#ffffff;
+    border: 0px solid;
+    text-indent: 10px;
+}
+
+#palclave2{
+    width: 140px;
+    height: 40px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 60px;
+    background-color:#ffffff;
+    border: 0px solid;
+    text-indent: 10px;
+}
+
+#claenvi{
+    width: 80px;
+    height: 40px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 60px;
+    background-color:#ffffff;
+    border: 0px solid;
+    text-indent: 10px;
+}
+
+
+.tema2{
+    text-decoration-style: none;
+    list-style: none;
+    margin-left: 100px;
+    color: bisque;
+    
+}

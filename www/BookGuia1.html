@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+<link rel="stylesheet" href="css/pure.css">
+<link rel="stylesheet" href="css/side-menu.css">
+<link rel="stylesheet" href="css/marco.css">
+<script type="text/javascript" src="js/bookflip.js"></script>
+
+</head>
+        
+<body>
+
+
+
+<div id="layout">
+
+    <div id="main">
+     <div id="men1">
+        <p>Guía</p>
+        <a id="btn1" href="demos.html"> <img src="imag/IconMal.png">
+            </a>          
+    </div>
+            
+      <div class="content">
+        <div id="mensaje1" style="text-align:center;"><img src="demos/error104.gif" width="400"></div>
+        <div id="garabat1">
+
+	<div id="bookflip"></div>
+</div>
+	<div id="pages"  style="width:1px;height:1px; overflow:hidden;">
+        		<div style="background:url('guia1/pagB.jpg');"></div>
+        
+		<div style="background:url('guia1/pag1.jpg'); background-size: 100%;"></div>
+		<div style="background:url('guia1/pag2.jpg'); background-size: 100%"></div>
+		<div style="background:url('guia1/pag3.jpg'); background-size: 100%;"></div>
+		<div style="background:url('guia1/pag4.jpg'); background-size: 100%;"></div>
+		<div style="background:url('guia1/pag5.jpg'); background-size: 100%;"></div>
+		<div style="background:url('guia1/pag6.jpg'); background-size: 100%;"></div>
+		<div style="background:url('guia1/pagB.jpg'); background-size: 100%;"></div>
+
+	</div>
+
+<script type="text/javascript">
+
+pWidth=400; //width of each page
+pHeight=400; //height of each page
+
+numPixels=20;  //size of block in pixels to move each pass
+pSpeed=15; //speed of animation, more is slower
+
+startingPage="0";//select page to start from, for last page use "e", eg. startingPage="e"
+allowAutoflipFromUrl = true; //true allows querystring in url eg bookflip.html?autoflip=5
+
+pageBackgroundColor="#CCCCCC";
+pageFontColor="#ffffff";
+
+pageBorderWidth="0";
+pageBorderColor="#3D4D5D";
+  //dotted, dashed, solid, double, groove, ridge, inset, outset, dotted solid double dashed, dotted solid
+
+
+allowPageClick=true; //allow page turn by clicking the page directly
+allowNavigation=true; //this builds a drop down list of pages for auto navigation.
+pageNumberPrefix="page "; //displays in the drop down list of pages if enabled
+
+ini();
+</script>          
+       
+      </div>
+    </div>
+</div>
+
+
+</body>
+</html>

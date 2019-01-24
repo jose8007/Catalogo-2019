@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+<title>APP LIBRESA &ndash; </title>
+
+<link rel="stylesheet" href="css/base-min.css">
+<link rel="stylesheet" href="css/pure.css">
+<link rel="stylesheet" href="css/side-menu.css">
+
+    <script language="JavaScript" type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/xpath.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/SpryData.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/SpryURLUtils.js"></script>   
+    <script language="JavaScript" type="text/javascript" src="js/SpryPagedView.js"></script>    
+       
+ <script language="JavaScript" type="text/javascript">
+    
+        var params = Spry.Utils.getLocationParamsAsObject();
+        var xpath = "Catalogos/Catalogo";
+        var de = (params.Cole);
+        if ((params.Cole))
+        xpath = "Catalogos/Catalogo[nivelEduca = '"+params.Cole+"']";
+        
+var  dsProducts1 = new Spry.Data.XMLDataSet("recipeproblem.xml", xpath,{sortOnLoad: "id", sortOrderOnLoad: "descending", distinctOnLoad: true, distinctFieldsOnLoad:['clave1',]}); 
+dsProducts1.setColumnType("id", "number");     
+     
+     function dan(b)
+     {
+    var tf = document.getElementsByTagName("p")[b].textContent; 
+	var filterFunc = function(dataset, row, rowNumber)
+	{	if (row["clave1"] == tf)
+		return row;
+		return null;
+	};
+	dsProducts1.filter(filterFunc);
+    }
+     
+    var pvCities = new Spry.Data.PagedView(dsProducts1); 
+
+</script>
+	</head>
+	<body>
+        <div id="layout">
+
+    <div id="main">
+
+                <div id="grafnivel"><img id="imp1" src="imag/" height="200" width="150"></div>
+                <div class="header2" spry:region="dsProducts1"  spry:repeat="dsProducts1">
+                    
+                    <p onclick="dan({ds_RowNumber});">{clave1}</p>               
+               
+        </div>
+
+        </div>
+        </div>
+                                         
+        
+
+	<!-- Footer -->
+
+	</body>
+
+</html>

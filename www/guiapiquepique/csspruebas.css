@@ -1,0 +1,532 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+};
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+/*reporte*/
+
+body{
+    background-image: url(imgs/backgroundreporte.jpg);
+        
+}
+
+#prime{
+    margin: 0 auto;
+    width: 600px;
+    margin-top: 20px;
+}
+
+
+#redatos{
+    width: 180px;
+    height: 220px;
+    background-color:#ede7c9;
+    padding: 15px; 
+    float: left;
+    font-family:sans-serif;
+}
+
+#dat1{
+    text-align: center;
+}
+
+#dat1 h1{
+    font-size: 1.1em;
+}
+
+#dat1 p{
+    font-size: 0.8em;
+    line-height: 1.3em;
+}
+
+#fecha{
+    font-size: 0.7em;
+    font-family: sans-serif;
+};
+
+
+#redatos p{
+margin-top: 6px;
+width: 100%;
+}
+
+
+#avatar{
+    width: 100%;
+    text-align: center;
+}
+
+#avatar img{
+    width: 70px;
+}
+
+#relibros{
+    width: 390px;
+    float: left;
+    font-family: sans-serif;
+}
+
+#relibros2{
+    width: 500px;
+    float: left;
+}
+
+#booka{
+    width: 380px;
+    height: 105px;
+    float: left;
+    background-color: #598fb2;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+
+#booka p{
+    font-size:1.2em;
+    padding: 5px 0px;
+    line-height: 1.5em;
+    float: left;
+    width: 100%;
+    text-align: center;
+    
+}
+
+#booka img{
+    width: 50px;
+    margin-left: 40px;
+    margin-top: 12px;
+}
+
+
+
+#stage, #stage2{
+    width: 185px;
+    height: 135px;
+    background-color: #9fbf6c;
+    float: left;
+    margin-left: 10px;
+}
+
+#stage p{
+    font-size: 2.7em;
+    text-align: center;
+    color: white;    
+}
+
+#stage2 p{
+    font-size: 1em;
+    text-align: left;
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#stage2 div{
+    width: 89%;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    padding-top: 5px;
+    background-color: #4aaaa6;
+    padding: 10px;
+    vertical-align: bottom;
+    display: none;
+}
+
+#stage p:first-child {
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+
+#circle{
+    text-align: center;
+    margin-top: -10px;
+}
+
+#cert, #fail{
+    margin-left: 3px;
+}
+
+
+#salir{
+    height: 30px;
+    background-color: #d89256;
+    float: left;
+    width: 100%;
+    text-align: right;
+    padding: 10px 0px 0px 0px;
+    font-family: sans-serif;
+    color: white;
+    margin-top: 10px;
+}
+
+#salir p{
+    margin-right: 10px;
+    height: 100%;
+}
+
+#salir span{
+    margin-left: 30px;
+    height: 100%;
+}
+
+#salir img{
+    margin-left: 10px;
+    height: 35px;
+    padding: 0;
+    margin-right: 10px;
+}
+
+#salir a{
+   text-decoration-line: none;
+    text-decoration-color: white;
+    text-decoration: none;
+    color: white;
+}
+
+#salir p:first-child{
+    float: left;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+
+ /*comienza*/
+
+#prime2{
+    display:none;
+    margin: 0 auto;
+    width: 600px;
+    margin-top: 20px;
+}
+
+#separ{
+    clear: both;
+}
+
+.conpreg{
+    font-size: 1em;
+    background-color: #e6e6e6;
+    font-family: sans-serif;
+}
+
+
+.conpregpuzzle{
+    font-size: 1.1em;
+    background-color: #e6e6e6;
+    font-family: sans-serif;
+}
+
+.conpreg p{
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.conpreg span{
+    text-align: center;
+    font-size: 1em;
+    padding: 4px 12px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 0px;
+    margin-right: 10px;
+   
+}
+
+.conpregpuzzle p{
+    margin-top: 15px;
+    padding: 5px;
+}
+
+
+
+#preg{
+   background-color: #cbcbcb;
+    height: 50px;
+}
+
+#preg img{
+    width: 45px;
+    padding: 2px;
+    float: left;
+}
+
+#preg  p{
+    padding-top: 10px;
+    vertical-align: middle;
+}
+
+.conpreg img{
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.conpreg li{
+    list-style: none;
+    float: left;
+    padding: 5px 8px;
+    background-color: #408198;
+    color: white;
+    border-radius: 5px;
+    margin: 20px 20px 10px 20px;
+}
+
+#correcto{
+    color:black;
+    padding-left: 20px;
+    
+}
+
+#correctoPala{
+    color:white;
+    padding: 5px 8px;
+    background-color: green;
+    border-radius: 5px;
+}
+
+#incorrecto{
+    color: red;
+}
+
+
+#empacolor{
+    float: left;
+    margin-left: 50px;    
+}
+
+#empacolor p{
+    padding: 14px;
+    border-radius: 20px;
+    color: white;
+    margin: 10px 0;
+    width: 300px;
+}
+
+#empacolor span{
+    color: black;
+    margin-left: 10px;
+}
+#empacolor p:nth-child(1){
+    background-color: #ac7948;
+}
+
+#empacolor p:nth-child(2){
+    background-color: #1e68b1;
+}
+
+#empacolor p:nth-child(3){
+    background-color: #7b47b2;
+}
+
+
+#empacolorpreg{
+    width: 180px;
+    float: left;
+}
+
+#empacolorpreg p{
+    padding: 8px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1em;
+}
+
+#empacolorpreg p:nth-child(1){
+    background-color: #1e68b1;
+}
+
+#empacolorpreg p:nth-child(2){
+    background-color: #7b47b2;
+}
+
+#empacolorpreg p:nth-child(3){
+    background-color: #ac7948;
+}
+
+#empacolorpreg span{
+    font-size: 1.4em;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 20px;
+    color: black;  
+}
+
+
+#empacolorpreg p:nth-child(1){
+    background-color: #1e68b1;
+}
+
+#empacolorpreg p:nth-child(2){
+    background-color: #7b47b2;
+}
+
+#empacolorpreg p:nth-child(3){
+    background-color: #ac7948;
+}
+
+#clickme{
+    color: white;
+    background-color: #fc642d;
+    float: left;}
+
+
+#puzzlecanvas{
+    width: 370px;
+    height:300px;
+    padding: 0;
+    margin-left: 100px;
+    background-color: none !important;
+    margin-top: 10px;
+}
+
+
+.puzzle, .puzzle1, .puzzle2, .puzzle3, .puzzle4{
+    width: 35px;
+    height: 35px;
+    background-color: #408198;
+    float: left;
+    border: solid 1px white;
+    text-align: center;
+    font-size: 1em;
+    text-transform: uppercase; 
+    font-family: sans-serif;   
+    margin-top: 0;
+}
+
+.puzzle p{
+    color:  #408198;
+    padding: 0;
+    margin: 0;
+    margin-top: 3px;
+    
+}
+
+.puzzle1 p, .puzzle2 p, .puzzle3 p, .puzzle4 p{
+    padding: 0;
+    margin: 0;
+    margin-top: 3px;
+    color: white;    
+}
+
+.puzzle1, .puzzle2, .puzzle3, .puzzle4{
+    background-color: #f5cd26;
+}
+
+
+.selecimagen{
+    float: left;
+    margin-left: 40px;
+    text-align: center;
+    font-size: 1.4em;
+    margin-top: 10px;
+    height: 180px;
+    
+}
+
+
+.selecimagen span{
+    text-align: center;
+    font-size: 1.4em;
+    padding: 4px 12px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 10px;
+   
+}
+
+.selecimagen img{
+    width: 130px;
+}
+
+
+
+#imgcorrec{
+    background-color: green;
+    color: white;
+}
+
+#imgincorrec{
+    border-radius: 50%;
+    border: solid 10px red;
+    filter: none;
+}
+
+
+.respuesta{
+    background-color: green;
+    height: 30px;
+    padding: 10px;
+    color: white;
+    margin-top: 15px;
+    font-size: 1em;
+}
+
+.respuesta span{
+    text-align: center;
+    font-size: 1.1em;
+    padding: 4px 12px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: black;
+    margin-left: 10px;   
+}
+
+.respuesta span2{
+    text-align: center;
+    font-size: 1.1em;
+    padding: 4px 8px;
+    margin-top: 10px;
+    margin-right: 4px;
+    color: white
+    margin-left: 10px;   
+}

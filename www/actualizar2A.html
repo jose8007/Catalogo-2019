@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Catalogo LIBRESA</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+<script language="JavaScript" type="text/javascript" src="js/xpath.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/SpryData.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/SpryURLUtils.js"></script>  
+
+ <script language="JavaScript" type="text/javascript">
+     
+
+        var params = Spry.Utils.getLocationParamsAsObject();
+
+        if ((params.clave))
+        xpath = "Catalogos/Catalogo[isbn = '"+params.clave+"']";       
+        var  dsProducts1 = new Spry.Data.XMLDataSet("recipe.php", xpath); 
+</script>
+    
+</head>
+
+
+<body>
+
+        <div spry:region="dsProducts1">
+        <div spry:repeat="dsProducts1">
+        <p>{titulo}</p>
+		<input id="imagLib" class="inmag" type="image" src="webimagfin/{img}.jpg"  onclick="location='actualizar2A.html?clave={isbn}'">
+                                            
+
+           </div>
+        </div>       
+
+</body>
+
+</html>

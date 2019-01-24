@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="target page">
+
+<title>APP LIBRESA &ndash; </title>
+
+<link rel="stylesheet" href="css/base-min.css">
+<link rel="stylesheet" href="css/pure.css">
+<link rel="stylesheet" href="css/side-menu.css">
+    
+<script language="JavaScript" type="text/javascript" src="js/xpath.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/SpryData.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/SpryURLUtils.js"></script>	
+	<script language="JavaScript" type="text/javascript">
+
+        
+        var dsProducts1 = new Spry.Data.XMLDataSet("recipe2.php", "Catalogos/Catalogo");
+        
+</script>
+    
+</head>
+    
+    
+<body>
+
+
+
+<div id="layout">
+
+
+
+
+    <div id="main"  >
+         
+        <div spry:region="dsProducts1" >
+        
+        <div spry:repeat="dsProducts1" spry:test="{ds_RowNumber}&lt;1;">
+		<div style="text-align:center"><img class="pure-img-responsive" src="webimagfin/{img}.jpg" width="300px" ></div>
+        <div style="text-align:center; margin-top:30px; line-height:normal;"><h2>{titulo}</h2><br/>    
+        <h5>Autor(a):&nbsp;{autor} / Ilustrador(a):&nbsp;{ilustrador}</h5> 
+        <p id="resumen">{resumen}</p> </div>   
+           
+             <div class="clean"></div>
+            <div style="margin-left:25%; float:left;">
+            <p style="line-height:normal;"><img src="imag/CircColec.png" width="30" style="vertical-align:middle;">&nbsp;{coleccion}.</p>
+            <p style="line-height:normal;"><img src="imag/CircGenero.png" width="30" style="vertical-align:middle;">&nbsp;{genero}.</p>
+            <p style="line-height:normal;"><img src="imag/CircTema.png" width="30" style="vertical-align:middle;">&nbsp;{tema}</p>
+            <p style="line-height:normal;"><img src="imag/CircValor.png" width="30" style="vertical-align:middle;">&nbsp;{valores}</p>
+            <p style="line-height:normal;"><img src="imag/CircEdad.png" width="30" style="vertical-align:middle;">&nbsp;{segmento}</p>
+            </div>
+            
+            
+        
+    </div>
+</div>
+
+    </div></div>
+
+
+
+<script src="js/ui.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+<title>APP LIBRESA &ndash; </title>
+
+<link rel="stylesheet" href="css/base-min.css">
+<link rel="stylesheet" href="css/pure.css">
+<link rel="stylesheet" href="css/side-menu.css">
+
+<script language="JavaScript" type="text/javascript" src="js/xpath.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/SpryData.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/SpryURLUtils.js"></script>
+ 
+<script language="JavaScript" type="text/javascript">
+<!--
+    
+var params = Spry.Utils.getLocationParamsAsObject();
+var xpath = "Catalogos/Catalogo[coleccion = 'Antares']";
+if ((params.genero))
+  xpath = "Catalogos/Catalogo[coleccion = 'Antares'][genero = '"+params.genero+"']";
+    
+var dsProducts1 = new Spry.Data.XMLDataSet("recipeproblem.xml", xpath,{sortOnLoad: "numcolec", sortOrderOnLoad: "descending", distinctOnLoad: true});
+    
+dsProducts1.setColumnType("numcolec", "number");
+    
+     function dan(b)
+     {
+    var tf = document.getElementsByTagName("li")[b].textContent; 
+	var filterFunc = function(dataset, row, rowNumber)
+	{	if (row["genero"] == tf)
+		return row;
+		return null;
+	};
+	dsProducts1.filter(filterFunc);
+    }
+    
+    function dan2(b)
+     {
+	var filterFunc = function(dataset, row, rowNumber)
+	{	if (row["pais"] ==  "Ecuador")
+		return row;
+		return null;
+	};
+	dsProducts1.filter(filterFunc);
+    }
+    
+</script>
+
+</head>
+    
+    
+<body>
+
+
+
+<div id="layout">
+
+
+    <div id="main">
+        
+        <div class="header" style=" background-image:url(imag/imagantarA.jpg)">
+            
+                <ul class="menu-temas">
+                <li><a onclick="dan(0)">Novela</a></li>
+                <li ><a onclick="dan(1);">Relato-Crónica</a></li>
+                <li ><a onclick="dan(2);">Cuento</a></li>
+                <li ><a onclick="dan(3);">Poesía</a></li>
+                    
+                <li><a onclick="dan(4)">Teatro</a></li>
+                <li ><a onclick="dan(5);">Ensayo</a></li>
+                <li ><a onclick="dan(6);">Prosa</a></li>
+                <li ><a onclick="dan(7);">Narrativa</a></li>                    
+                    
+                <li><a onclick="dan2(8)" value = "Ecuador">Autores ecuatorianos</a></li>            
+                <li style="background-color:orange" ><a onclick="dsProducts1.filter(null);">Ver todos los libros</a></li>
+           </ul>                    
+
+        </div>
+
+        <div id="men1" spry:region="dsProducts1">
+                    <a href="index.html" style="margin-left:50px;">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="60" height="60" viewBox="0 0 37.95 41.25" enable-background="new 0 0 37.95 41.25" xml:space="preserve">
+<ellipse fill="#FFFFFF" cx="18.918" cy="19.588" rx="18.975" ry="21.662"/>
+<polygon fill="#c1c1c1" points="5.318,17.782 18.509,4.592 23.521,9.604 23.521,6.062 28.688,6.062 28.688,14.124 32.179,17.612 30.11,17.612 
+	30.11,30.652 22.525,30.652 22.525,20.221 15.751,20.221 15.751,30.652 7.215,30.652 7.215,17.814 "/>
+<rect fill="#c1c1c1" x="16.384" y="20.854" width="5.563" height="9.797"/>
+</svg></a>
+        <a id="btn1" href="colecciones.html">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0"
+	 width="60" height="60" viewBox="0 0 37.95 41.25" enable-background="new 0 0 37.95 41.25" xml:space="preserve">
+<ellipse fill="#FFFFFF" cx="18.918" cy="19.588" rx="18.975" ry="21.662"/>
+<polyline fill="#c1c1c1" points="19.619,32.625 5.169,18.175 19.619,3.725 "/>
+<rect fill="#c1c1c1" x="16.034" y="10.896" width="15.322" height="14.557"/>
+</svg>
+
+
+            </a>
+    
+            </div> 
+        
+
+        <div class="content" spry:region="dsProducts1">
+           
+               <div class="imgbook" spry:repeat="dsProducts1" spry:test="{ds_RowNumber}&lt;4;">
+                     
+                   <input class="inmag" type="image" src="webimagfin/{img}.webp"  onclick="location='datlibros.html?isbn={isbn}'">
+                   <span value="fel">{titulo}</span>
+ 
+                   
+                 </div>
+
+            <div class="clean"></div>
+            <br>
+    <div style="height:30px;"></div>
+     <div  spry:repeat="dsProducts1" onclick="location='datlibros.html?isbn={isbn}'">
+     <div class="list"><span>{numcolec})</span> {titulo} - {genero}</div>
+     
+     </div>
+     
+     
+        </div>
+                   
+   
+     
+    
+            
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+#mensaje1 { display:none;}
+
+@media (max-width: 650px) {
+#garabat1 { display:none;}
+
+}
+
+@media (max-width: 750px) {
+#mensaje1{ display:block;
+		line-height:normal;
+		width:80%;
+		}
+
+}
