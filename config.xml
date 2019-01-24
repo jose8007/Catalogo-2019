@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" android-versionCode="1" version="0.0.1" id="not.yet.specified"  >
-<name>Catalogo 2018</name>
+<name>Catalogo 2019</name>
 <description>Catalogo LIBRESA</description>
 <author>Libresa</author>
 <content src="index.html"/>
@@ -18,7 +18,7 @@
     <!--<preference name="Orientation" value="portrait"/> -->
     <preference name="AndroidLaunchMode" value="singleTop"/>
 	<preference name="splashscreen" value="splash"/>
-	<preference name="splashScreenDelay" value="10000"/>
+	<preference name="splashScreenDelay" value="20000"/>
 	<splash src="package-assets/iconos/screen426.png" density="ldpi" width="320" height="426" orientation="portrait"/>
 	<splash src="package-assets/iconos/screen470.png" density="mdpi" width="320" height="470" orientation="portrait"/>
 	<splash src="package-assets/iconos/screen640.png" density="hdpi" width="480" height="640" orientation="portrait"/>
