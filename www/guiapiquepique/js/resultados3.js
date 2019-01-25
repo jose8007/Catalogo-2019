@@ -2,15 +2,7 @@
 $(document).ready(function(){    
     
     $('body #enviar').on('click', function(){
-        
-    var userid = localStorage.getItem("liuserprob");
-
-    
-    var codguias = "piquepi8629";    
-        
-   
-    var resultado = 0;
-    
+          
     //Pregunta1
     var opcion1 = $("input:checked[name=example1]").val();
     var respu1 = opcion1;
@@ -74,7 +66,6 @@ $(document).ready(function(){
     var resultado = (resultado*10)/11;
     var resultado = resultado.toFixed(1);
   window.location.href = 'resultadosprueba2.html?' + "verinfo=" + resultado;
-       
         
    })
    
