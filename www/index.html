@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html>
@@ -195,3 +196,202 @@ var sprysuggest1 = new Spry.Widget.AutoSuggest("spryautosuggest1", "productMenu"
 
 
 </html>
+=======
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Catalogo LIBRESA</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+    <style>
+    /* following three (cascaded) are equivalent to above three meta viewport statements */
+    /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+    /* see http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; } 
+        @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }
+        @viewport { user-zoom: fixed ; }
+        /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+    </style>
+
+    <link rel="stylesheet" href="css/side-menu.css">
+    <link rel="stylesheet" href="css/pure.css">
+     <link href="css/SpryAutoSuggest.css" rel="stylesheet" type="text/css" />
+    
+ 
+    <script language="JavaScript" type="text/javascript" src="js/xpath.js">   </script>
+    <script language="JavaScript" type="text/javascript" src="js/SpryData.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/SpryDataExtensions.js"></script>
+    <script src="js/SpryAutoSuggest.js" type="text/javascript"></script>
+   
+    
+<script language="JavaScript" type="text/javascript">
+
+    
+var dsProducts1 = new Spry.Data.XMLDataSet("recipeproblem.xml", "Catalogos/Catalogo");
+
+
+function FilterData(){
+var tf = document.getElementById("filterTF");
+if (!tf.value)
+{
+// If the text field is empty, remove any filter
+// that is set on the data set.
+dsProducts1.filter(null);
+return;
+}
+// Set a filter on the data set that matches any row
+// that begins with the string in the text field.
+var regExpStr = tf.value;
+if (!document.getElementById("containsCB").checked)
+regExpStr = "" + regExpStr;
+var regExp = new RegExp(regExpStr, "i");
+var filterFunc = function(ds, row, rowNumber)
+
+{
+var str = row["titulo"];
+if (str && str.search(regExp) != -1)
+return row;
+return null;
+};
+
+var filterFunc2 = function(ds, row, rowNumber)
+{
+var str = row["Libro"];
+if (str && str.search(regExp) != -1)
+return row;
+return null;
+};
+
+dsProducts1.filter(filterFunc);
+dsProducts2.filter(filterFunc2);    
+}
+    
+    
+function StartFilterTimer()
+{
+    
+if (StartFilterTimer.timerID)
+clearTimeout(StartFilterTimer.timerID);
+StartFilterTimer.timerID = setTimeout(function() { StartFilterTimer.timerID = null; FilterData(); }, 300);
+
+}
+
+function cambios(){
+    document.getElementById("prin1").style.display = "none";
+    document.getElementById("men1").style.visibility = "visible";
+    document.getElementById("busca1A").style.display = "inline";
+    document.getElementById("busca2A").style.display = "inline";
+	document.getElementById("pie").style.display = "none";
+    }
+  
+</script> 
+</head>
+
+
+<body>
+
+
+    <div class="main" >
+        <div class="header">
+            <h2>Buscador</h2>
+            
+<div id="spryautosuggest1" align="center">
+&nbsp;
+    <input id="filterTF" value="" size="40" type="text" /> &nbsp;
+    <input name="Busc" id="Busc" onClick="StartFilterTimer(); cambios();" value="Buscar" type="button" />
+
+<div id="productMenu" spry:region="dsProducts1">
+<div spry:repeat="dsProducts1" spry:test="{ds_RowNumber}&lt;3" spry:suggest="{titulo}">
+<div>{titulo}</div>
+</div>
+</div><br /><br />
+<script type="text/javascript">
+<!--
+var sprysuggest1 = new Spry.Widget.AutoSuggest("spryautosuggest1", "productMenu", "dsProducts1", "titulo");
+//-->
+</script> 
+
+<input id="containsCB" style="visibility: hidden;" type="checkbox" /> </div>
+
+</div>
+        <div id="men1" style="visibility:hidden;">
+        <a id="btn1" href="index.html">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0"
+	 width="60" height="60" viewBox="0 0 37.95 41.25" enable-background="new 0 0 37.95 41.25" xml:space="preserve">
+
+<polyline fill="#FFFFFF" points="19.619,32.625 5.169,18.175 19.619,3.725 "/>
+<rect fill="#FFFFFF" x="16.034" y="10.896" width="15.322" height="14.557"/>
+</svg>
+
+
+            </a>
+             
+        </div> </div>
+
+
+        <div class="content">
+            <div id="prin1">
+                
+            <div id="coleca">
+            <a href="colecciones.html"><img src="imag/colecimag.jpg">
+                <span>FONDO EDITORIAL</span>
+                </a>
+            </div>                
+            <div id="plan">
+               <a href="planlector.html"> <img src="imag/imagplan.jpg"  ><span>PLAN LECTOR</span></a>
+            </div>
+      
+
+            <div id="autores" >
+               <a href="demos.html"><img src="imag/demoimagen.jpg"><span>DEMOS</span> </a>
+            </div>
+
+            
+            <div class="clean"></div>
+            <div id="guias">
+            <a href="plataforma.html"><img src="imag/imaplan5.jpg"><span>PLATAFORMA</span> </a>
+            </div>
+            <div id="premiados">
+            <a href="CatagPremi.html"><img src="imag/democoncu.jpg"><span>PREMIOS</span> </a>
+            </div>    
+                <div class="clean"></div>   
+            <div id="desarrollo">
+            <a href="desarrollo.html"><img src="imag/desaimag.jpg"><span>Proyecto P.A.I.</span> </a>
+            </div>                
+            <div id="didactica">
+            <a href="didactica.html"><img src="imag/didacimag.jpg"><span>DIDÁCTICA</span> </a>
+            </div>
+  
+         
+        </div>
+        
+        <div id="busca1A" style="display:none;" spry:region="dsProducts1">
+        <div spry:repeat="dsProducts1" spry:test="{ds_RowNumber}&lt;4;">
+ 		<input id="imagLib" class="inmag" type="image" src="webimagfin/{img}.webp"  onclick="location='datlibros.html?isbn={isbn}'">
+                                            
+
+           </div>
+        </div>       
+    
+    </div>
+
+	<div id="pie">
+    <img src="imag/LogoLibresa.png" width="120">
+    <p style="font-size:0.7em; color:#666;">&nbsp; San José Oe8-45, sector San Camilo, Calderón / www.libresa.com / Quito - Ecuador<br/>&nbsp; Todos los derechos reservados</p>
+    </div>
+</body>
+
+
+
+
+</html>
+>>>>>>> origin/master
