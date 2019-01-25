@@ -118,9 +118,6 @@ a:hover {
 }
 
 
-
-
-
 @media only screen and (orientation:portrait) {
 .menu-panel,
 	.content {
@@ -129,33 +126,27 @@ a:hover {
      #page { display: none;}
     
     #men1 {
-    position: fixed;
-    width: 50px !important;    
-    height: 50px !important;
-    z-index: 999;
+    width: 100%; !important;    
+    height: 30px !important;
     opacity: 1;
-    border-radius: 100%;
-    border-color: white;
-    background-color: red !important;
-    top: 10px;
-    right: 10px;
-}
+    background-color: #f0f0f0 !important;
+    height: 20px;
+    }
+    #men1 p{
+    text-align: left;
+    display: none;
+    }
+    
     
     #men1 img {
+    position: absolute;    
     width: 35px; 
     height: 35px;
-    position: absolute;
-        left: 7px;
-        bottom: 8px;
+    top: 5px;
+    right: 10px;
+    z-index: 999;
     }
     
-    #men1 p{
-display: none;
-    }
-    
-    #men1:hover {
-    background-color: #f57e7e !important;    
-    }
     
     #coleca span {
         font-size: 0.5em;
@@ -168,16 +159,18 @@ display: none;
     }
     
 
-.header {
+    .header {
     padding-top: 5px;
     height: 20px;
     overflow: hidden;
-} 
+    } 
     
         #mensaje3 {
 		display:none;
 		}
     }
+
+
 @media only screen and (orientation:landscape) {
     #container {
 		display:none;
@@ -190,17 +183,13 @@ display: none;
 		}
     
     #men1 {
-    position: fixed;
-    width: 50px !important;    
-    height: 50px !important;
+    width: 100%; !important;    
+    height: 20px !important;
     z-index: 999;
     opacity: 1;
-    border-radius: 100%;
-    border-color: white;
-    background-color: red !important;
-    top: 10px;
-    right: 10px;
-}
+    background-color: lightgray!important;
+    height: 20px;
+    }
     
     #men1 img {
     width: 35px; 
@@ -209,11 +198,7 @@ display: none;
         left: 7px;
         bottom: 8px;
     }
-    
-    #men1 p{
-display: none;
-    }
-    
+        
     #men1:hover {
     background-color: #f57e7e !important;    
     }
@@ -230,6 +215,9 @@ display: none;
 	width: 60px;
 	height: 60px;
 }
+    #men1{
+        height: 50px;
+    }
 }
 
 @media screen and (max-height: 450px){
