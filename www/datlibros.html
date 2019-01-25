@@ -39,9 +39,11 @@
 
 
     <div id="main"  >
+        <div class="header3">
+            <img src="imag/imagcolec.jpg" width="100%">
+        </div>    
          
          <div id="men1">
-             
         <a id="btn1" onClick="goBack()">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0"
 	 width="60" height="60" viewBox="0 0 37.95 41.25" enable-background="new 0 0 37.95 41.25" xml:space="preserve">
@@ -49,10 +51,9 @@
 <polyline fill="#FFFFFF" points="19.619,32.625 5.169,18.175 19.619,3.725 "/>
 <rect fill="#FFFFFF" x="16.034" y="10.896" width="15.322" height="14.557"/>
 </svg>
-
-
             </a> 
-            </div><br/> 
+            </div>
+        <br/> 
         <div spry:region="dsProducts1" >
         
         <div spry:repeat="dsProducts1" spry:test="{ds_RowNumber}&lt;1;">
@@ -62,14 +63,17 @@
         <p id="resumen">{resumen}</p> </div>   
            
              <div class="clean"></div>
-            <div style="margin-left:25%; float:left;">
+            <div style="margin-left:20%; float:left;">
             <p style="line-height:normal;"><img src="imag/CircColec.png" width="30" style="vertical-align:middle;">&nbsp;{coleccion}.</p>
             <p style="line-height:normal;"><img src="imag/CircGenero.png" width="30" style="vertical-align:middle;">&nbsp;{genero}.</p>
             <p style="line-height:normal;"><img src="imag/CircTema.png" width="30" style="vertical-align:middle;">&nbsp;{tema}</p>
             <p style="line-height:normal;"><img src="imag/CircValor.png" width="30" style="vertical-align:middle;">&nbsp;{valores}</p>
             <p style="line-height:normal;"><img src="imag/CircEdad.png" width="30" style="vertical-align:middle;">&nbsp;{segmento}</p>
             <hr>
-            <p style="line-height:normal;">Guía del profesor:&nbsp;{profe}&nbsp;&nbsp;/&nbsp;Guía del alumno:&nbsp;{alumno}&nbsp;&nbsp;/&nbsp;Guía interactiva:&nbsp;{interactiva}</p>            
+            <p style="line-height:normal;">
+                Guía del profesor:&nbsp;{profe}&nbsp;/&nbsp;
+                Guía del alumno:&nbsp;{alumno}<br/>
+                Guía interactiva:&nbsp;{interactiva}</p>            
             </div>
             
             
