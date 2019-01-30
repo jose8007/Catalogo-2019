@@ -1,243 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/actividades.css"/>
-
-	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-    <script type="text/javascript" src="js/interact.min.js"></script>
-	<script type="text/javascript" src="js/dragdrop.js"></script>
-
+    <meta charset="UTF-8">
+    <title>bamboo demo</title>
+    <link rel="stylesheet" type="text/css" href="css/bamboo.css">  
+    <script type="text/javascript" src="js/bamboo.min.js"></script>
+    <style type="text/css">
+        .demo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 98%
+            height: 98%;
+        }
+        
+         #men4 {
+    position: absolute; 
+             top: 20px;
+    right: 10px;
+    z-index: 999;
+    opacity: 1;
+    height: 20px;
+    }
+    </style>
 </head>
-    
-    
 <body>
-<div id="preloader">
-    
-  <div id="status">&nbsp;</div>
-</div>    
-
-<div id="mensaje3" align="center"><p><img src="imgs/error104.gif"></p></div>
-    
-<div id="fullpage">
-    
-     <form> 
-         
-    <div class="section" id="section1">
-        
-    <!-- Bienvenida-->
-	    <div class="slide active">
-            
-            <div id="pagina1">
-                <h1>Bienvenido</h1>
-                <p>El propósito de estas actividades es ofrecer a los estudiantes una herramienta práctica y efectiva para el desarrollo de un conjunto de destrezas cognitivas esenciales para el razonamiento y la comprensión del texto literario.<br/><br/>
-<br/><br/>
-
-</p>
-           
-            </div>        
-        </div>
-        
-        
-    <!-- Instrucciones-->    
-    <div class="slide">
-            
-            <div id="pagina1">
-                <h1>Instrucciones</h1>
-                
-                <p>En la parte superior izquierda hay un ícono que al presionar encontrarás detallado la secuencia de pasos que se deben seguir para ejecutar el ejercicio planteado. Las respuestas se grabarán al finalizar todos los ejercicios.</p>
-                       
+         <div id="men4">
+        <a id="btn1" href="plataforma.html"> <img src="imag/IconMal.png" width="60">
+            </a> 
+             
             </div>
-  
-        </div>
-
-<!--1 Seleccion-->
-        <div class="slide">
-	                
-            <div id="orden">
-                <a  href="imgs/mensaje1.png" class="lightbox_trigger" >
-                <img src="imgs/escojeicon.png"></a><p>¿Qué quería hacer Pique Pique con sus patas?</p>
-            </div>
-            
- <div id="respuesta">
-                <div class="parraEsco">
-                <span><input type="radio" class="option-input radio" name="example1" value="1" /></span>
-                    
-                    <p>Pintarlas de colores</p></div>
-                
-                <div class="parraEsco">
-                <span><input type="radio" class="option-input radio" name="example1" value="2" /></span>
-                    
-                    <p>Mojarlas en el mar</p></div>                              
-                <div class="parraEsco">
-                <span><input type="radio" class="option-input radio" name="example1" value="3" /></span>                    
-                    <p>Sacudirlas</p></div>                                
-            </div>             
-    </div> 
-
-<!--2 Seleccion grafico-->
-        
-        <div class="slide">
-	                
-            <div id="orden">
-                <a  href="imgs/mensaje1.png" class="lightbox_trigger" >
-                <img src="imgs/escojeicon.png"></a><p>¿En dónde recogía colores Pique Pique?</p>
-            </div>
-            
-            <div id="respuesta">            
-                <div id="selecimagen">
-                <label>
-                    <div><img src="imgs/pique-pag7.png"><br/><input type="radio" name="seleimg" value="1" class="option-input radio"/></div>
-                </label>                    
-                    
-                <label>
-                    <div><img src="imgs/pique-pag10.png"><br/><input type="radio" name="seleimg" value="2" class="option-input radio" /></div>
-                </label>
-                    
-                <label>
-                    <div><img src="imgs/pique-pag11.png"><br/><input type="radio" name="seleimg" value="3" class="option-input radio" /></div>
-                </label>
-                </div>             
-            </div>               
-    </div>   
-        
-<!--3 Verdaderdo Falso-->
-            <div class="slide">
-            <div id="orden">
-                <a href="imgs/mensaje5.png" class="lightbox_trigger">
-                <img src="imgs/icono7.png"></a><p>Verdadero o Falso</p></div>
-            
-            <div id="respuesta">          
-          
-            <div class="parraVF">
-                <span><input type="radio" class="option-inputVF radio" name="vfopcion1" value="verdadero" />
-                    <input type="radio" class="option-inputVF2 radio" name="vfopcion1" value="falso"/></span>
-                    
-                    <p>Pique le pidió a las nubes el color azul</p></div>
-                          
-                <div class="parraVF">
-                <span><input type="radio" class="option-inputVF radio" name="vfopcion2" value="verdadero" />
-                      <input type="radio" class="option-inputVF2 radio" name="vfopcion2" value="falso" /></span>
-                    <p>Cuando ya tenía los colores le faltaba una brocha</p></div>
-                  
-            </div>          
-        
-        </div>   
-
-<!--4 Seleccion grafico-->
-        
-        <div class="slide">
-	                
-            <div id="orden">
-                <a  href="imgs/mensaje1.png" class="lightbox_trigger" >
-                <img src="imgs/escojeicon.png"></a><p>¿Quién derramó los colores de la botella?</p>
-            </div>
-            
-            <div id="respuesta">            
-                <div id="selecimagen">
-                <label>
-                    <div><img src="imgs/pique-pag19.png"><br/><input type="radio" name="seleimg2" value="1" class="option-input radio"/></div>
-                </label>                    
-                    
-                <label>
-                    <div><img src="imgs/pique-pag15.png"><br/><input type="radio" name="seleimg2" value="2" class="option-input radio" /></div>
-                </label>
-                    
-                <label>
-                    <div><img src="imgs/pique-pag14.png"><br/><input type="radio" name="seleimg2" value="3" class="option-input radio" /></div>
-                </label>
-                </div>             
-            </div>               
-    </div>           
-
- <!--5 Secuenciacion-->
-        
-        <div class="slide">    
-            <div id="orden">
-                <a href="imgs/mensaje4.png" class="lightbox_trigger">
-                <img src="imgs/icono6.png"></a><p>Pon en orden que se dan los hechos según la historia</p></div>
-            
-            <div id="respuesta">           
-               <div id="numpreg">
-                   <p><span id="clickme" class="numclick">0</span>Pique queda pintado de muchos colores</p>
-                   <p><span id="clickme2" class="numclick">0</span>	Se puso a buscar colores</p>
-                   
-                    <p><span id="clickme3" class="numclick">0</span>Se fue a buscar una brocha</p>
-                </div>
-              
-            </div>     
-        </div>  
- 
-        
-<!----6 Seleccion imagen-texto -->
-        <div class="slide">
-	                
-            <div id="orden">
-                <a  href="imgs/mensaje1.png" class="lightbox_trigger" >
-                <img src="imgs/escojeicon.png"></a><p>Según la imagen qué hacía Pique</p>
-            </div>
-                <div id="respuesta">
-                 <div id="img2"><img src="imgs/pique-pag20.png" width="150"></div>
-                <div>    
-                <div class="parraEsco">
-                <span><input type="radio" class="option-input radio" name="example2" value="1" /></span>
-                    
-                    <p>Estaba jugando</p></div>
-                
-                <div class="parraEsco">
-                <span><input type="radio" class="option-input radio" name="example2" value="2" /></span>
-                    
-                    <p>Estaba recogiendo los colores en la botella</p></div>                              
-                <div class="parraEsco">
-                <span><input type="radio" class="option-input radio" name="example2" value="3" /></span>                    
-                    <p>Se estaba pintando</p></div>                                
-                    </div>  </div>           
+    <div class="demo">
+        <div class="slides">
+            <div><img src="imag/pique1.jpg"></div>
+            <div><img src="imag/pique2.jpg"></div>
+            <div><img src="imag/pique3.jpg"></div>
+            <div><img src="imag/pique4.jpg"></div>
+            <div><img src="imag/pique5.jpg"></div>
+            <div><img src="imag/pique6.jpg"></div>
+            <div><img src="imag/pique7.jpg"></div>
+        </div> 
     </div>  
-
-<!--7 Verdaderdo Falso-->
-        
-            <div class="slide">
-            <div id="orden">
-                <a href="imgs/mensaje5.png" class="lightbox_trigger">
-                <img src="imgs/icono7.png"></a><p>Verdadero o Falso</p></div>
-            
-            <div id="respuesta">          
-          
-            <div class="parraVF">
-                <span><input type="radio" class="option-inputVF radio" name="vfopcion3" value="verdadero" />
-                    <input type="radio" class="option-inputVF2 radio" name="vfopcion3" value="falso"/></span>
-                    
-                    <p>Pique se pintó solo las patas</p></div>
-                          
-                <div class="parraVF">
-                <span><input type="radio" class="option-inputVF radio" name="vfopcion4" value="verdadero" />
-                      <input type="radio" class="option-inputVF2 radio" name="vfopcion4" value="falso" /></span>
-                    <p>El sol le prestó color morado</p></div>
-                  
-            </div>          
-        
-        </div>   
-        
- 
- <!-- Final enviar-->       
-        <div class="slide">
-            
-            <div id="pagina1">
-                <h1>¡Has finalizado!</h1>               
-                <p>Recuerda revisar que todas las actividades esten completas. Presiona el botón inferior para enviar tus respuestas. </p>
-                <p id="enviar"><img src="imgs/enviar.png"></p>
-                <p id="endatos"><img src="imgs/enviodatos.gif"></p>
-                       
-            </div>        
-        </div>
-        
-	</div>
-        </form>  
-
-</div>
-    
-    <script type="text/javascript" src="js/resultados3.js"></script>
+    <script type="text/javascript">
+        var element = document.querySelector('.demo');
+        var sildeshow = bamboo(element, 'roll', {
+        autoPlay: false,
+        autoFitImg: true,
+        reverse: false,
+        timeout: 4000,
+        speed: 2000,
+        hideDot: true,
+        hideArrow: false,
+        prev: document.querySelector('.prev'),
+        next: document.querySelector('.next'),
+});
+    </script> 
 </body>
 </html>
