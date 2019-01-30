@@ -2,61 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bamboo demo</title>
-    <link rel="stylesheet" type="text/css" href="css/bamboo.css">  
-    <script type="text/javascript" src="js/bamboo.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="css/pure.css">
+    <script type="text/javascript" src="js/siema.min.js"></script>   
     <style type="text/css">
-        .demo {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            width: 98%
-            height: 98%;
-        }
+        
+@media only screen and (orientation:portrait) {
+        #mensaje3 { display:block; }
+    #contenido {
+        display:none;
+    }
+    }
+
+@media only screen and (orientation:landscape) {
+        #mensaje3 { display:none; }
+    #contenido{
+        display: block;
+    }
+    }
+        
         
          #men4 {
     position: absolute; 
-             top: 20px;
+    top: 20px;
     right: 10px;
     z-index: 999;
     opacity: 1;
     height: 20px;
     }
+        
+     .carru img{
+            width: 100%;
+        }
+        
+        #prev{
+            z-index: 999;
+            position: absolute;
+            top: 40%;
+            left: 10px;
+            width: 10%;
+        }
+        
+        #prev img{
+            width: 100%;
+        }
+       #next{
+            z-index: 999;
+            position: absolute;
+            top: 40%;
+            right: 10px;
+            width: 10%;
+        }
+        
+        #next img{
+            width: 100%;
+        }      
     </style>
+
 </head>
+    
 <body>
+            <div id="mensaje3" style="text-align:center;"><img src="demos/error104.gif" width="400"></div>
          <div id="men4">
         <a id="btn1" href="plataforma.html"> <img src="imag/IconMal.png" width="60">
             </a> 
              
             </div>
-    <div class="demo">
-        <div class="slides">
-            <div><img src="imag/pique1.jpg"></div>
-            <div><img src="imag/pique2.jpg"></div>
-            <div><img src="imag/pique3.jpg"></div>
-            <div><img src="imag/pique4.jpg"></div>
-            <div><img src="imag/pique5.jpg"></div>
-            <div><img src="imag/pique6.jpg"></div>
-            <div><img src="imag/pique7.jpg"></div>
-        </div> 
-    </div>  
-    <script type="text/javascript">
-        var element = document.querySelector('.demo');
-        var sildeshow = bamboo(element, 'roll', {
-        autoPlay: false,
-        autoFitImg: true,
-        reverse: false,
-        timeout: 4000,
-        speed: 2000,
-        hideDot: true,
-        hideArrow: false,
-        prev: document.querySelector('.prev'),
-        next: document.querySelector('.next'),
-});
-    </script> 
+<div id="contenido" class="siema">
+  <div class="carru"><img src="imag/pique1.jpg" class="pure-img"></div>
+  <div class="carru"><img src="imag/pique2.jpg" class="pure-img"></div>
+  <div class="carru"><img src="imag/pique3.jpg" class="pure-img"></div>
+  <div class="carru"><img src="imag/pique4.jpg" class="pure-img"></div>
+  <div class="carru"><img src="imag/pique5.jpg" class="pure-img"></div>
+  <div class="carru"><img src="imag/pique6.jpg" class="pure-img"></div> 
+  <div class="carru"><img src="imag/pique7.jpg" class="pure-img"></div>   
+</div> 
+    <div id="prev" class="prev"><img src="imag/icoflecha2.png" class="pure-img"></div>
+<div  id="next" class="next"><img src="imag/icoflecha.png" class="pure-img"></div>
+    
+    <script>
+  var mySiema = new Siema();
+  document.querySelector('.prev').addEventListener('click', function() {mySiema.prev()});
+  document.querySelector('.next').addEventListener('click', function() {mySiema.next()});
+</script>
 </body>
 </html>
