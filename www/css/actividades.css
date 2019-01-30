@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster);
 /* Reset CSS
  * --------------------------------------- */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
@@ -55,13 +54,25 @@ abbr,acronym { border: 0;
     margin-top: 30%;
 }
 
+@media only screen and (max-width: 380px) {
+    #pagina1 p{
+        font-size: 1em;
+        background-color: aqua;
+    }
+    }
+
 @media only screen and (orientation:portrait) {
         #mensaje3{ display:inline; }
         #fullpage { display:none; }
+    
+
     }
+
 @media only screen and (orientation:landscape) {
         #mensaje3 { display:none; }
     }
+
+
 /* Preloader */
 
 #preloader {
@@ -300,7 +311,7 @@ p{
   background: #9faab7;
 }
 .option-input:checked {
- background-image:url(imgs/visto.png);
+ background-image:url(../imgs/visto.png);
 }
 
 .option-input.radio {
@@ -356,7 +367,7 @@ p{
   background: #9faab7;
 }
 .option-inputVF:checked {
- background-image:url(imgs/verdadero.png);
+ background-image:url(../imgs/verdadero.png);
 }
 
 .option-inputVF.radio {
@@ -389,7 +400,7 @@ p{
   background: #9faab7;
 }
 .option-inputVF2:checked {
- background-image:url(imgs/falso.png);
+ background-image:url(../imgs/falso.png);
 }
 .option-inputVF2.radio {
   border-radius: 50%;

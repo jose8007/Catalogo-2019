@@ -1,0 +1,326 @@
+<html>
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Verificar respuestas</title>
+        	<link rel="stylesheet" type="text/css" media="all" href="csspruebas.css"/>
+            <script src="jquery.min.js"></script>
+            <script type="text/javascript" src="despliegue.js"></script>
+            <script src="circle-progress.min.js"></script>
+        
+        
+    <script language="JavaScript">
+       var remplaza = /\+/gi; 
+        var url = window.location.href;
+
+        url = unescape(url);
+        url = url.replace(remplaza, " ");
+        url = url.toUpperCase();
+
+        function obtener_valor(variable) 
+        { 
+            var variable_may = variable.toUpperCase();
+            var variable_pos = url.indexOf(variable_may);
+
+            if (variable_pos != -1) 
+            {
+                var pos_separador = url.indexOf("&", variable_pos);
+
+                if (pos_separador != -1) 
+                {
+                    return url.substring(variable_pos + variable_may.length + 1, pos_separador);
+                } else
+                {
+                    return url.substring(variable_pos + variable_may.length + 1, url.length);
+                }
+            } else 
+            {
+                return "NO_ENCONTRADO";
+            }
+        }   
+        var valor = obtener_valor("verinfo");
+        var resultado = (valor*10)/23;
+        var resultado = resultado.toFixed(1);
+</script>
+
+    
+</head>
+<body>
+            <div id="separ"></div>
+                    
+    
+        <section id="prime">
+             
+            <div id="redatos">
+                <div id="dat1"> 
+                <h1><strong>Juan Carlos Pérez Chávez</strong></h1>
+                    <p>Colegio Militar Quito</p>
+                    <p>9no de Educación Básica</p>
+                    <p>Profesor(a):<br/> Armando Sálomon</p>
+                </div>
+               
+            </div>
+            <div id="relibros">
+                <div id="stage"><p>Resultado</p><br/>
+                    <div id="circle"></div><p id="resultado1">8/10</p></div> 
+                <div id="stage2">
+                    <p>Acertadas:<span id="cert"></span></p><br/>
+                    <p>Equivocadas:<span id="fail"></span></p><br/>
+                    <div id="boton-cargar">Ver respuestas</div> 
+                    </div>
+                
+                <div id="booka">
+                 <p id="boton-borrar">¿Te gusto este libro?<br/>
+                        <img src="imgs/icon1bad.png">
+                        <img src="imgs/icon1middle.png">
+                        <img src="imgs/icon1good.png">
+                    </p>
+                      
+                </div>
+   
+            </div> 
+            <div id="salir"><p>Derechos reservados a LIBRESA S.A.</p>
+            <p><a href="../Guiasdemo.html">Salir</a></p></div>
+                     <div id="separ"></div>
+                </section>
+    
+                  
+             
+
+            <div id="prime2">                
+                                
+                <section class="conpreg">
+                    
+                    <div id="preg"><img src="imgs/escojeicon.png"><p>El reino cambió y se libró de su caprichoso rey porque…</p></div>   
+                <p><span>1</span>El rey modificó su carácter y dejó de ser tan caprichoso</p>
+                <p><span id="imgcorrec">2</span>El vecino más ocurrente del reino tuvo una excelente idea</p>
+                <p><span>3</span>El pueblo por fin se organizó para tumbarlo de su trono</p>
+                    
+                    <div id="selec1" class="respuesta">Tu respuesta(s): <span id="pre1">s/r</span> </div>  
+                </section>
+                
+                <section class="conpreg">
+                    
+                    <div id="preg"><img src="imgs/escojeicon.png"><p>¿En cuál de estas imágenes el pueblo ignora a su caprichoso rey? </p></div>
+                            
+              <div>
+                <div class="selecimagen"><img src="imgs/Bigotesrey15.png"><br/><span>1</span></div>
+                <div class="selecimagen"><img src="imgs/Bigotesrey22.png"><br/><span id="imgcorrec">2</span></div>
+                <div class="selecimagen"><img src="imgs/Bigotesrey17.png"><br/><span>3</span></div>
+                    
+                    </div>
+                    <div id="separ"></div>
+                    <div id="selecimg1" class="respuesta">Tu respuesta(s):<span id="pre2">s/r</span> </div>  
+                </section>
+                
+                <section class="conpreg">
+                    
+                    <div id="preg"><img src="imgs/icono2.png"><p>Une los colores del personaje con estos hechos o cualidades:</p>  </div>
+                    
+               <div id="empacolorpreg">
+                   <p>1. El rey</p>
+                   <p>2. El ocurrente</p>           
+                   <p>3. El pueblo</p>
+                </div>
+              
+                
+                <div id="empacolor">
+                    <p>Muy astuto e inteligente<span>2</span></p>
+                    
+                    <p>Aprendió a vivir libre<span>3</span></p>
+    
+                    <p>Mandón e impaciente<span>1</span></p>
+                                        
+                    </div> 
+                    <div id="separ"></div>
+                    
+                    <div id="empacolor1" class="respuesta">Tu respuesta(s): <span id="pre3">s/r</span><span id="pre4">s/r</span><span id="pre5">s/r</span> </div>  
+
+                </section>
+                         
+             
+                <section class="conpreg">                    
+                    <div id="preg"><img src="imgs/icono7.png"><p>¿Crees tú que estas ideas son verdaderas o falsas?</p></div>
+                
+                <p><img src="imgs/verdadero.png">El pueblo estaba harto de los caprichos reales  </p>
+                <p ><img src="imgs/verdadero.png">La gente terminó ignorando totalmente al rey  </p>
+                    
+                    <div id="selecvf1" class="respuesta">Tu respuesta(s): <span2 id="pre6">s/r</span2><span2 id="pre7">s/r</span2> </div>  
+
+                </section>
+
+                <section class="conpreg">                    
+                    <div id="preg"><img src="imgs/icono4.png"><p>Ante el capricho de tener bigotes, a alguien se le ocurre una buena solución:  </p></div>
+                
+                <p>El vecino más <spn id="correctoPala">ocurrente</spn> tuvo una genial idea para librarse del rey por 30 días. </p>
+                    
+                <div id="palabra1" class="respuesta">Tu respuesta(s): <span2 id="pre8">s/r</span2> </div>     
+
+                </section>
+                
+                <section class="conpreg">                    
+                    <div id="preg"><img src="imgs/icono6.png"><p>¿Cuál es el orden correcto de estos hechos? 1º, 2º y 3º </p></div>
+                
+                    <p><span id="clickme">2</span> El vecino más ocurrente del barrio tiene una idea y por eso pregunta qué es lo que más le gusta al rey, además de molestar a todo...</p>
+                   <p><span id="clickme">3</span>32 días después del tratamiento, reaparece el rey: está el doble de gordo, el doble de lampiño, el doble de arrugado y el doble...</p>
+                   <p><span id="clickme">1</span>El rey da la orden de cambiar los nombres de las calles, el color de las casas  y sus ventanas. También manda colgar carteles...</p>
+                    
+                    <div id="ordennum1" class="respuesta">Tu respuesta(s): <span id="pre9">s/r</span> <span id="pre10">s/r</span> <span id="pre11">s/r</span> </div>  
+
+                </section>
+                
+                <section class="conpreg">
+                    
+                    <div id="preg"><img src="imgs/icono4.png"><p>Ordena cómo sucedieron los hechos de esta historia </p></div>
+        
+                    
+                    <div class="selecimagen"><img src="imgs/Bigotesrey8.png"><br/><span id="imgcorrec">3</span></div>
+                    <div class="selecimagen"><img src="imgs/Bigotesrey13.png"><br/><span id="imgcorrec">1</span></div>
+                    <div class="selecimagen"><img src="imgs/Bigotesrey20.png"><br/><span id="imgcorrec">2</span></div>
+                    
+                    <div id="separ"></div>
+                     
+                    <div id="ordenimg1" class="respuesta">Tu respuesta(s): <span id="pre12">s/r</span><span id="pre13">s/r</span><span id="pre14">s/r</span> </div>  
+                </section>
+                
+                <section class="conpregpuzzle">
+                    
+                    <div id="preg"><img src="imgs/icono8.png"><p>Aquí hay personajes ocultos en forma horizontal, vertical o diagonal</p></div>
+        
+                    
+                
+                <br/>
+            <div id="puzzlecanvas" >
+                <div class="puzzle"><p id="letra">1</p></div>
+                <div class="puzzle"><p id="letra">2</p></div>
+                <div class="puzzle"><p id="letra">3</p></div>
+                <div class="puzzle"><p id="letra">4</p></div>
+                <div class="puzzle"><p id="letra">5</p></div>
+                <div class="puzzle"><p id="letra">6</p></div>
+                <div class="puzzle"><p id="letra">7</p></div>
+                <div class="puzzle"><p id="letra">8</p></div>
+                <div class="puzzle"><p id="letra">9</p></div>
+                <div class="puzzle"><p id="letra">10</p></div>            
+                <!--Segunda fila -->
+                <div class="puzzle"><p id="letra">11</p></div>
+                <div class="puzzle"><p id="letra">12</p></div>
+                <div class="puzzle"><p id="letra">13</p></div>
+                <div class="puzzle"><p id="letra">14</p></div>
+                <div class="puzzle"><p id="letra">15</p></div>
+                <div class="puzzle"><p id="letra">16</p></div>
+                <div class="puzzle"><p id="letra">17</p></div>
+                <div class="puzzle"><p id="letra">18</p></div>
+                <div class="puzzle"><p id="letra">19</p></div>
+                <div class="puzzle"><p id="letra">20</p></div> 
+                <!--tercera fila-->     
+                <div class="puzzle"><p id="letra">21</p></div>
+                <div class="puzzle3"><p id="letra">B</p></div>
+                <div class="puzzle3"><p id="letra">O</p></div>
+                <div class="puzzle3"><p id="letra">T</p></div>
+                <div class="puzzle3"><p id="letra">I</p></div>
+                <div class="puzzle3"><p id="letra">C</p></div>
+                <div class="puzzle3"><p id="letra">A</p></div>
+                <div class="puzzle2"><p id="letra">R</p></div>
+                <div class="puzzle3"><p id="letra">I</p></div>
+                <div class="puzzle3"><p id="letra">O</p></div>
+                <!--cuarta fila-->       
+                <div class="puzzle"><p id="letra">31</p></div>
+                <div class="puzzle"><p id="letra">32</p></div>
+                <div class="puzzle"><p id="letra">33</p></div>
+                <div class="puzzle"><p id="letra">34</p></div>
+                <div class="puzzle"><p id="letra">35</p></div>
+                <div class="puzzle1"><p id="letra">B</p></div>
+                <div class="puzzle"><p id="letra">37</p></div>
+                <div class="puzzle2"><p id="letra">E</p></div>
+                <div class="puzzle"><p id="letra">39</p></div>
+                <div class="puzzle"><p id="letra">40</p></div>
+                <!--quinta fila-->       
+                <div class="puzzle"><p id="letra">41</p></div>
+                <div class="puzzle"><p id="letra">42</p></div>
+                <div class="puzzle"><p id="letra">43</p></div>
+                <div class="puzzle"><p id="letra">44</p></div>
+                <div class="puzzle"><p id="letra">45</p></div>
+                <div class="puzzle"><p id="letra">46</p></div>
+                <div class="puzzle1"><p id="letra">R</p></div>
+                <div class="puzzle2"><p id="letra">Y</p></div>
+                <div class="puzzle"><p id="letra">49</p></div>
+                <div class="puzzle"><p id="letra">50</p></div>
+                <!--sexta fila-->       
+                <div class="puzzle"><p id="letra">51</p></div>
+                <div class="puzzle"><p id="letra">52</p></div>
+                <div class="puzzle"><p id="letra">53</p></div>
+                <div class="puzzle"><p id="letra">54</p></div>
+                <div class="puzzle"><p id="letra">55</p></div>
+                <div class="puzzle"><p id="letra">56</p></div>
+                <div class="puzzle"><p id="letra">57</p></div>
+                <div class="puzzle1"><p id="letra">U</p></div>
+                <div class="puzzle"><p id="letra">59</p></div>
+                <div class="puzzle"><p id="letra">60</p></div>
+                <!--septima fila-->       
+                <div class="puzzle"><p id="letra">61</p></div>
+                <div class="puzzle"><p id="letra">62</p></div>
+                <div class="puzzle"><p id="letra">63</p></div>
+                <div class="puzzle"><p id="letra">64</p></div>
+                <div class="puzzle"><p id="letra">65</p></div>
+                <div class="puzzle"><p id="letra">66</p></div>
+                <div class="puzzle"><p id="letra">67</p></div>
+                <div class="puzzle"><p id="letra">68</p></div>
+                <div class="puzzle1"><p id="letra">J</p></div>
+                <div class="puzzle"><p id="letra">70</p></div>
+                <!--octava fila-->       
+                <div class="puzzle4"><p id="letra">C</p></div>
+                <div class="puzzle4"><p id="letra">I</p></div>
+                <div class="puzzle4"><p id="letra">E</p></div>
+                <div class="puzzle4"><p id="letra">N</p></div>
+                <div class="puzzle4"><p id="letra">T</p></div>
+                <div class="puzzle4"><p id="letra">I</p></div>
+                <div class="puzzle4"><p id="letra">F</p></div>
+                <div class="puzzle4"><p id="letra">I</p></div>
+                <div class="puzzle4"><p id="letra">C</p></div>
+                <div class="puzzle1"><p id="letra">O</p></div>    
+            </div>                      
+                    <div id="puzzle1" class="respuesta">Tu respuesta(s):<span2 id="pre15">s/r</span2><span2 id="pre16">s/r</span2><span2 id="pre17">s/r</span2><span2 id="pre18">s/r</span2> </div>  
+                </section>
+                
+                <section class="conpreg">                    
+                <div id="preg"><img src="imgs/icono4.png"><p>
+                   Esta frase resume el final de esta historia:</p></div>
+                
+                    <p id="correcto"><strong>Un día el rey se aburrió de que nadie le hiciera caso. </strong></p>
+                
+                <div id="oracion1" class="respuesta">Tu respuesta(s): <span2 id="pre19">s/r</span2></div>    
+
+                </section>
+                
+                <section class="conpreg">                    
+                    <div id="preg"><img src="imgs/icono1A.png"><p>Sólo cuatro de estos personajes aparecen en esta historia; ¿cuáles?</p></div>
+                
+                <li>Un ocurrente</li>   <li>Rey furioso</li>
+                <li>El científico</li>
+                <li>El brujo</li>
+                <div id="separ"></div>    
+                <div id="arrastre1" class="respuesta">Tu respuesta(s): <span2 id="pre20">s/r</span2></div>      
+                </section>
+    </div>
+    
+
+
+         <script>
+                        
+            $('#circle').circleProgress({
+            value: 1,
+            size: 90,
+            fill: {color: "#ff1e41" },
+            thickness : 10,   
+            }).on('circle-animation-end', function(event, progress) {
+             $("#circle").css("display", "none");
+            $("#resultado1").text(resultado + "/"+10);      
+             $("resultado1").css("display", "block");
+            $("#cert").text(valor);
+            $("#fail").text(23 - valor);
+            $("#stage2 div").css("display", "block");
+             })
+             
+        </script> 
+
+</body> 
+</html>

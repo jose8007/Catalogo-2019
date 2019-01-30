@@ -1,21 +1,8 @@
-$(window).on('load', function() { 
-    
-    //internet explorer
-      
-        var ua = window.navigator.userAgent;
-        var msie = ua.indexOf("MSIE");
-        if (msie !== -1){
-            window.location.href = 'atencion.html';
-        };
-    
-    
-  $('#status').fadeOut(); 
+$(document).ready(function(){
+        
+$('#status').fadeOut(); 
   $('#preloader').delay(350).fadeOut('slow');
   $('body').delay(350).css({'overflow':'visible'});
-})
-
-
-    $(document).ready(function(){
         
         //inicio
         
@@ -239,6 +226,7 @@ interact('.dropzone').dropzone({
         
     // ordena numeros 
     var count = 0;
+    
     $('body .numclick').on('click', function(){
 
         if(count < 3){
