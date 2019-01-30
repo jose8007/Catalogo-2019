@@ -1,59 +1,37 @@
-﻿		<?xml version="1.0" encoding="UTF-8"?>
-	<widget xmlns = "http://www.w3.org/ns/widgets"
-		xmlns:gap = "http://phonegap.com/ns/1.0"
-		xmlns:android = "http://schemas.android.com/apk/res/android"
-		id        = "not.yet.specified"
-		versionCode=""
-		version   = "0.0.1">
-		<name>Catalogo 2019</name>
-		<description>Catalogo LIBRESA 2019</description>
-		<author href="" email="josalazar80@hotmail.com">Felipe Ñacato</author>
-		<preference name="phonegap-version" value="cli-6.3.0" />
-		<preference name="android-build-tool" value="gradle" />
-		<preference name="orientation" value="portrait" />
-		<preference name="fullscreen" value="false" />
-		<preference name="target-device" value="universal" />
-		<preference name="webviewbounce" value="true" />
-		<preference name="prerendered-icon" value="false" />
-		<preference name="stay-in-webview" value="true" />
-		<preference name="ios-statusbarstyle" value="default" />
-		<preference name="detect-data-types" value="true" />
-		<preference name="exit-on-suspend" value="true" />
-		<preference name="show-splash-screen-spinner" value="true" />
-		<preference name="auto-hide-splash-screen" value="true" />
-		<preference name="FadeSplashScreen " value="true" />
-		<preference name="EnableViewportScale" value="true" />
-		<preference name="MediaPlaybackRequiresUserAction" value="false" />
-		<preference name="AllowInlineMediaPlayback" value="true" />
-		<preference name="BackupWebStorage" value="none" />
-		<preference name="TopActivityIndicator" value="white" />
-		<preference name="KeyboardDisplayRequiresUserAction" value="true" />
-		<preference name="KeyboardShrinksView " value="true" />
-		<preference name="HideKeyboardFormAccessoryBar" value="true" />
-		<preference name="SuppressesIncrementalRendering" value="false" />
-		<preference name="windows-identity-name" value="" />
-		<preference name="android-minSdkVersion" value="14" />
-		<preference name="android-installLocation" value="auto" />
-		<preference name="SplashScreenDelay" value="2000" />
-		<preference name="ErrorUrl" value="null" />
-		<preference name="BackgroundColor" value="0x000000" />
-		<preference name="DisallowOverscroll" value="true" />
-		<preference name="LoadingDialog" value="Cargando," />
-		<preference name="LoadUrlTimeoutValue" value="null" />
-		<platform name="ios">
-		</platform>
-		<platform name="android">
-
-	<icon platform="android" src="package-assets/iconos/icontablet.png" density="ldpi" width="36" height="36"/>
-	<icon platform="android" src="package-assets/iconos/icontablet2.png" density="mdpi" width="48" height="48"/>
-	<icon platform="android" src="package-assets/iconos/icontablet3.png" density="hdpi" width="72" height="72"/>
-	<icon platform="android" src="package-assets/iconos/icontablet4.png" density="xhdpi" width="96" height="96"/>
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" android-versionCode="1" version="0.0.1" id="not.yet.specified"  >
+<name>Catalogo2019</name>
+<description>Catalogo LIBRESA</description>
+<author>Libresa</author>
+<content src="index.html"/>
+<preference name="android-build-tool" value="gradle" />
+<platform name="android" >
+    <access origin="*"/>
+</platform>
+<preference name="phonegap-version" value="cli-6.5.0" />
+<platform name="android" >
+    <preference name="android-minSdkVersion" value="16"/>
+    <preference name="android-targetSdkVersion" value="23"/>
+    <preference name="android-installLocation" value="auto"/>
+    <preference name="android-signed" value="true"/>
+    <preference name="Fullscreen" value="true"/>
+    <!--<preference name="Orientation" value="portrait"/> -->
+    <preference name="AndroidLaunchMode" value="singleTop"/>
+	<preference name="splashscreen" value="splash"/>
+	<preference name="splashScreenDelay" value="10000"/>
 	<splash src="package-assets/iconos/screen426.png" density="ldpi" width="320" height="426" orientation="portrait"/>
 	<splash src="package-assets/iconos/screen470.png" density="mdpi" width="320" height="470" orientation="portrait"/>
 	<splash src="package-assets/iconos/screen640.png" density="hdpi" width="480" height="640" orientation="portrait"/>
 	<splash src="package-assets/iconos/screen960.png" density="xhdpi" width="720" height="960" orientation="portrait"/>
-		</platform>
-		<platform name="winphone">
-		</platform>
-		 <icon src="icon.png" />
-		</widget>
+	<preference name="SplashScreenBackgroundColor" value="#2383b5" />
+</platform>
+
+
+<icon platform="android" src="package-assets/iconos/icontablet.png" density="ldpi" width="36" height="36"/>
+<icon platform="android" src="package-assets/iconos/icontablet2.png" density="mdpi" width="48" height="48"/>
+<icon platform="android" src="package-assets/iconos/icontablet3.png" density="hdpi" width="72" height="72"/>
+<icon platform="android" src="package-assets/iconos/icontablet4.png" density="xhdpi" width="96" height="96"/>
+<config-file platform="android" parent="/manifest/application" mode="merge">
+    <activity android:launchMode="singleTop" />
+</config-file>
+</widget>
