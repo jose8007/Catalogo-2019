@@ -1,10 +1,10 @@
-﻿﻿		<?xml version="1.0" encoding="UTF-8"?>
+﻿		<?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "not.yet.specified"
 		versionCode=""
-		version   = "0.0.2">
+		version   = "0.0.1">
 		<name>Catalogo 2019</name>
 		<description>Catalogo LIBRESA 2019</description>
 		<author href="" email="josalazar80@hotmail.com">Felipe Ñacato</author>
@@ -48,10 +48,10 @@
 	<icon platform="android" src="package-assets/iconos/icontablet2.png" density="mdpi" width="48" height="48"/>
 	<icon platform="android" src="package-assets/iconos/icontablet3.png" density="hdpi" width="72" height="72"/>
 	<icon platform="android" src="package-assets/iconos/icontablet4.png" density="xhdpi" width="96" height="96"/>
-	<splash platform="android" src="package-assets/iconos/screen426.png" density="ldpi" width="320" height="426" orientation="portrait"/>
-	<splash platform="android" src="package-assets/iconos/screen470.png" density="mdpi" width="320" height="470" orientation="portrait"/>
-	<splash platform="android" src="package-assets/iconos/screen640.png" density="hdpi" width="480" height="640" orientation="portrait"/>
-	<splash platform="android" src="package-assets/iconos/screen960.png" density="xhdpi" width="720" height="960" orientation="portrait"/>
+	<splash src="package-assets/iconos/screen426.png" density="ldpi" width="320" height="426" orientation="portrait"/>
+	<splash src="package-assets/iconos/screen470.png" density="mdpi" width="320" height="470" orientation="portrait"/>
+	<splash src="package-assets/iconos/screen640.png" density="hdpi" width="480" height="640" orientation="portrait"/>
+	<splash src="package-assets/iconos/screen960.png" density="xhdpi" width="720" height="960" orientation="portrait"/>
 		</platform>
 		<platform name="winphone">
 		</platform>
