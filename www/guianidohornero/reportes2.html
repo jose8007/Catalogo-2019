@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Libresa</title>
+
+
+	<link rel="stylesheet" type="text/css" href="base.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="csspruebas.css"/>
+    <link rel="stylesheet" href="font-awesome.min.css">
+
+	<script src="jquery.min.js"></script>
+    <script src="stars.min.js"></script>
+    <script src="circle-progress.min.js"></script>
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+    <script type="text/javascript" src="interact.min.js"></script>
+	<script type="text/javascript" src="resultados.js"></script> 
+    <script type="text/javascript" src="dragdroppruebas.js"></script>
+    
+    <script language="JavaScript">
+        var remplaza = /\+/gi; 
+        var url = window.location.href;
+
+        url = unescape(url);
+        url = url.replace(remplaza, " ");
+        url = url.toUpperCase();
+
+        function obtener_valor(variable) 
+        { 
+            var variable_may = variable.toUpperCase();
+            var variable_pos = url.indexOf(variable_may);
+
+            if (variable_pos != -1) 
+            {
+                var pos_separador = url.indexOf("&", variable_pos);
+
+                if (pos_separador != -1) 
+                {
+                    return url.substring(variable_pos + variable_may.length + 1, pos_separador);
+                } else
+                {
+                    return url.substring(variable_pos + variable_may.length + 1, url.length);
+                }
+            } else 
+            {
+                return "NO_ENCONTRADO";
+            }
+        }   
+        var valor = obtener_valor("verinfo");
+</script>
+    
+    
+</head>
+<body>
+
+<div id="fullpage">   
+    <div class="section" id="section1">
+	    <div class="slide active">
+            
+            <div id="prime">
+                <div id="reporte1">                
+            <div id="redatos">
+                <div id="dat1"> 
+                <h1><strong>Juan Carlos Pérez Chávez</strong></h1>
+                    <p>Colegio Militar Quito</p>
+                    <p>9no de Educación Básica</p>
+                    <p>Profesor(a):<br/> Armando Sálomon</p>
+                </div>
+               
+            </div>
+            <div id="relibros">
+                <div id="stage"><p>Resultado 1</p><br/>
+                    <div id="circle"></div><p id="resultado1">8/10</p></div>
+            <div id="stage"><p>Resultado 2</p><br/><p>*/10</p></div>   
+            <div id="booka">
+                <a class="buttonre" href="guiseptimopasajero.html">Volver a intentarlo</a>
+                      
+                </div>
+   
+            </div>   
+            
+            </div>
+                       
+            </div>  
+            <div id="demo"></div>
+        </div>
+        
+
+        
+	</div>
+    
+
+</div>
+    
+ 
+         <script>
+             
+            $(".click-callback").stars({
+            });
+             
+            $(".click-callback2").stars({               
+            });            
+            $('#circle').circleProgress({
+            value: 1,
+            size: 90,
+            fill: {color: "#ff1e41" },
+            thickness : 10,   
+            }).on('circle-animation-end', function(event, progress) {
+             $("#circle").css("display", "none");
+            $("#resultado1").text(valor+"/"+10);      
+             $("resultado1").css("display", "block");     
+             }) 
+             
+        </script>    
+</body>
+</html>

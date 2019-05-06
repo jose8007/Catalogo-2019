@@ -1580,8 +1580,12 @@ since IE8 won't execute CSS that contains a CSS3 selector.
         width: 100%;
     }
     
-    #coleca span, #plan span, #autores span, #guias span, #premiados span, #didactica span, #desarrollo span{
+    #coleca span, #plan span, #autores span, #premiados span, #didactica span, #desarrollo span{
         font-size: 1.4em;
+    }
+    
+    #guias span{
+        font-size: 1.3em;
     }
     
     #filterTF{

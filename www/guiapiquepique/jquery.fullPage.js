@@ -5,10 +5,10 @@
  *
  * Copyright (C) 2015 alvarotrigo.com - A project by Alvaro Trigo
  */
-(function(global, factory) {
+(function (global, factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
-        define(['jquery'], function($) {
+        define(['jquery'], function ($) {
           return factory($, global, global.document, global.Math);
         });
     } else if (typeof exports === "object" && exports) {

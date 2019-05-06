@@ -1,0 +1,164 @@
+<html>
+    <head>            
+        <title>Verificar respuestas</title>
+<script src="jquery.min.js"></script>
+        <script>
+
+/*Funcion Cargar y Mostrar datos*/
+$(document).ready(function(){    
+    $('#boton-cargar').click(function(){
+        
+        /*Obtener datos almacenados*/
+        var pregunta = localStorage.getItem("re1");
+        var pregunta2 = localStorage.getItem("re2");
+        var pregunta3 = localStorage.getItem("re3");
+        var pregunta4 = localStorage.getItem("re4");
+        var pregunta5 = localStorage.getItem("re5");
+        var pregunta6 = localStorage.getItem("re6");
+        var pregunta7 = localStorage.getItem("re7");
+        var pregunta8 = localStorage.getItem("re8");
+        var pregunta9 = localStorage.getItem("re9");
+        var pregunta10 = localStorage.getItem("re10");
+        var pregunta11 = localStorage.getItem("re11");
+        var pregunta12 = localStorage.getItem("re12");
+        var pregunta13 = localStorage.getItem("re13");
+        var pregunta14 = localStorage.getItem("re14");
+        var pregunta15 = localStorage.getItem("re15");
+        var pregunta16 = localStorage.getItem("re16");
+        var pregunta17 = localStorage.getItem("re17");
+        var pregunta18 = localStorage.getItem("re18");
+        var pregunta19 = localStorage.getItem("re19");
+        var pregunta20 = localStorage.getItem("re20");
+        var pregunta21 = localStorage.getItem("re21");
+        var pregunta22 = localStorage.getItem("re22");
+        var pregunta23 = localStorage.getItem("re23");
+        var pregunta24 = localStorage.getItem("re24");         
+        var pregunta25 = localStorage.getItem("re25");
+        var pregunta26 = localStorage.getItem("re26");
+        var pregunta27 = localStorage.getItem("re27");
+        var pregunta28 = localStorage.getItem("re28");
+        var pregunta29 = localStorage.getItem("re29");
+        var pregunta30 = localStorage.getItem("re30");
+         
+        /*Mostrar datos almacenados*/      
+        document.getElementById("pre1").innerHTML = pregunta;
+        document.getElementById("pre2").innerHTML = pregunta2;
+        document.getElementById("pre3").innerHTML = pregunta3;
+        document.getElementById("pre4").innerHTML = pregunta4;
+        document.getElementById("pre5").innerHTML = pregunta5;
+        document.getElementById("pre6").innerHTML = pregunta6; 
+        document.getElementById("pre7").innerHTML = pregunta7;
+        document.getElementById("pre8").innerHTML = pregunta8;
+        document.getElementById("pre9").innerHTML = pregunta9;
+        document.getElementById("pre10").innerHTML = pregunta10;
+        document.getElementById("pre11").innerHTML = pregunta11;
+        document.getElementById("pre12").innerHTML = pregunta12;
+        document.getElementById("pre13").innerHTML = pregunta13;
+        document.getElementById("pre14").innerHTML = pregunta14; 
+        document.getElementById("pre15").innerHTML = pregunta15;
+        document.getElementById("pre16").innerHTML = pregunta16;
+        
+        document.getElementById("pre17").innerHTML = pregunta17;
+        document.getElementById("pre18").innerHTML = pregunta18;
+        document.getElementById("pre19").innerHTML = pregunta19;
+        document.getElementById("pre20").innerHTML = pregunta20;
+        document.getElementById("pre21").innerHTML = pregunta21;
+        document.getElementById("pre22").innerHTML = pregunta22; 
+        document.getElementById("pre23").innerHTML = pregunta23;
+        document.getElementById("pre24").innerHTML = pregunta24;
+        document.getElementById("pre25").innerHTML = pregunta25;
+        document.getElementById("pre26").innerHTML = pregunta26;
+        document.getElementById("pre27").innerHTML = pregunta27;
+        document.getElementById("pre28").innerHTML = pregunta28;
+        document.getElementById("pre29").innerHTML = pregunta29;
+        document.getElementById("pre30").innerHTML = pregunta30; 
+   
+        
+    });
+    
+    $('#boton-borrar').click(function(){   
+        localStorage.clear();
+    });
+    
+});
+
+</script>
+</head>
+<body>       
+<center><h1>Verificar respuestas</h1>
+ <button id="boton-cargar">
+Cargar elementos
+</button> 
+ <button id="boton-borrar">
+     Borrar elementos
+</button>     
+<hr />
+Pregunta 1:
+<label type="text" id="pre1"></label><br>                          
+Pregunta 2:
+<label type="text" id="pre2"></label><br>
+Pregunta 3:
+<label type="text" id="pre3"></label><br>                          
+Pregunta 4:
+<label type="text" id="pre4"></label><br>
+Pregunta 5:
+<label type="text" id="pre5"></label><br>                          
+Pregunta 6:
+<label type="text" id="pre6"></label><br>
+Pregunta 7:
+<label type="text" id="pre7"></label><br>                          
+Pregunta 8:
+<label type="text" id="pre8"></label><br>
+Pregunta 9:
+<label type="text" id="pre9"></label><br>                          
+Pregunta 10:
+<label type="text" id="pre10"></label><br>
+Pregunta 11:
+<label type="text" id="pre11"></label><br>                          
+Pregunta 12:
+<label type="text" id="pre12"></label><br>
+Pregunta 13:
+<label type="text" id="pre13"></label><br>                          
+Pregunta 14:
+<label type="text" id="pre14"></label><br>
+Pregunta 15:
+<label type="text" id="pre15"></label><br>                          
+Pregunta 16:
+<label type="text" id="pre16"></label><br>
+Pregunta 17:
+<label type="text" id="pre17"></label><br>                          
+Pregunta 18:
+<label type="text" id="pre18"></label><br>
+Pregunta 19:
+<label type="text" id="pre19"></label><br>                          
+Pregunta 20:
+<label type="text" id="pre20"></label><br>
+Pregunta 21:
+<label type="text" id="pre21"></label><br>                          
+Pregunta 22:
+<label type="text" id="pre22"></label><br>
+Pregunta 23:
+<label type="text" id="pre23"></label><br>                          
+Pregunta 24:
+<label type="text" id="pre24"></label><br>
+Pregunta 25:
+<label type="text" id="pre25"></label><br>                          
+Pregunta 26:
+<label type="text" id="pre26"></label><br>
+Pregunta 27:
+<label type="text" id="pre27"></label><br>                          
+Pregunta 28:
+<label type="text" id="pre28"></label><br>
+Pregunta 29:
+<label type="text" id="pre29"></label><br>                          
+Pregunta 30:
+<label type="text" id="pre30"></label><br>
+    
+    
+
+</center>
+
+<hr />
+
+</body> 
+</html>
